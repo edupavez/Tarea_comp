@@ -32,6 +32,18 @@ class RegresionCuad:
         return modulo
         
         
+    def matriz_por_vector(self, matriz, vector):
+        if len(matriz[0]) != len(vector):
+            raise ValueError("No se pueden multiplicar")
+        
+        producto = []
+        for fila in matriz:
+            suma = 0
+            for i in range(len(vector)):
+                suma += fila[i] * vector[i]
+            producto.append(suma)
+            
+        return producto
 ruta_1 = join("P1grupo_8.csv")
 
 if __name__ == "__main__":
