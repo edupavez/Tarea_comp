@@ -22,7 +22,16 @@ class RegresionCuad:
     def calcular_coeficientes(self):
         pass
 
-
+    
+    def modulo(self, vector):
+        #calculo de modulo en base a la norma 2
+        suma_coeficientes = 0
+        for coeficiente in vector:
+            suma_coeficientes += coeficiente ** 2
+        modulo = suma_coeficientes ** 0.5
+        return modulo
+        
+        
 ruta_1 = join("P1grupo_8.csv")
 
 if __name__ == "__main__":
